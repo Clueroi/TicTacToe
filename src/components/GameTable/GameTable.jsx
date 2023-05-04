@@ -2,7 +2,7 @@ import styles from './GameTable.module.css'
 import Icon from '../icon/Icon'
 
 
-function GameTable({status, onClick}){
+function GameTable({status, onClick, console}){
 
   return(
     <>

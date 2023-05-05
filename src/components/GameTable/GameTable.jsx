@@ -1,12 +1,20 @@
+import classNames from 'classnames'
+
 import styles from './GameTable.module.css'
 import Icon from '../icon/Icon'
 
 
-function GameTable({status, onClick, console}){
+function GameTable({status, onClick, isWinner}){
 
   return(
     <>
-      <div className={styles.GameTable} onClick={onClick}>
+      <div className={
+        classNames(styles.GameTable, {
+          [styles.winner]: isWinner
+        })
+      }
+      
+      onClick={onClick}>
         {
           status === 1 && <Icon iconName="O"/>
         }

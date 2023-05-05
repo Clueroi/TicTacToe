@@ -5,9 +5,17 @@ import Button from "../button/Button"
 
 
 function GameInfo({currentPlayer, winner, onReset}){
+  
+  const EnableButton = ()=>{
+    if( winner !== 0 ) return true
+  }
+
+  
   return(
 
-    <div className={styles.player}>
+    <div>
+
+      <div className={styles.player}>
       
         
         {
@@ -36,12 +44,14 @@ function GameInfo({currentPlayer, winner, onReset}){
           }
           </>
         }
-        <div>
-        <Button onClick={onReset} >
+        </div>
+        <div className={styles.button}>
+        <Button onClick={onReset}
+        disabled={!EnableButton()}
+        >
           Reiniciar
         </Button>
-        </div>
-        
+        </div>  
 
     </div>
   )

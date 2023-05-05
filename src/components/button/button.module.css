@@ -1,0 +1,17 @@
+.button{
+  padding: 5px;
+  background-color: #007BFF;
+  color:white;
+  border: solid white 1px;
+  font-size:20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.button:disabled{
+  cursor: default;
+  background-color: skyblue;
+  transition: 0.5s;
+}

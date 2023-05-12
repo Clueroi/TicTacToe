@@ -8,7 +8,7 @@ function Header(){
     <>
     <div className={styles.Header}>
        <Title> Jogo da Velha</Title>
-        <Subtitle>Criado por Eric</Subtitle>
+        <Subtitle>Criado por Eric Romero</Subtitle>
     </div>
     <div className={styles.IconContent}>
       <Icon iconName="github" link="https://github.com/Clueroi"></Icon>

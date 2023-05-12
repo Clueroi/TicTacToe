@@ -4,13 +4,14 @@ import styles from './GameTable.module.css'
 import Icon from '../icon/Icon'
 
 
-function GameTable({status, onClick, isWinner}){
+function GameTable({status, onClick, isWinner, isDraw}){
 
   return(
     <>
       <div className={
         classNames(styles.GameTable, {
-          [styles.winner]: isWinner
+          [styles.winner]: isWinner,
+          [styles.draw]: isDraw
         })
       }
       

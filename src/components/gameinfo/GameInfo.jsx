@@ -1,13 +1,18 @@
 import Icon from "../icon/Icon"
 import Subtitle from "../Subtitle/Subtitle"
-import styles from './GameInfo.module.css'
 import Button from "../button/Button"
 
 
-function GameInfo({currentPlayer, winner, onReset}){
+import styles from './GameInfo.module.css'
+
+
+
+
+function GameInfo({currentPlayer, winner, onReset, isDraw}){
   
   const EnableButton = ()=>{
     if( winner !== 0 ) return true
+    if(isDraw) return true
   }
 
   
@@ -19,7 +24,7 @@ function GameInfo({currentPlayer, winner, onReset}){
       
         
         {
-          winner === 0 && 
+         !isDraw && winner === 0 && 
           <>
           <Subtitle>Próximo a jogar:</Subtitle>
           {
@@ -33,15 +38,22 @@ function GameInfo({currentPlayer, winner, onReset}){
         
 
         {
-          winner !== 0 &&
+          !isDraw && winner !== 0 && 
           <>
-          <Subtitle> O vencedor é: </Subtitle>
+          <h2>O vencedor é: </h2> 
           {
             winner === 1 && <Icon iconName="O"/>
           }
           {
             winner === -1 && <Icon iconName="X"/>
           }
+          </>
+        }
+
+        {
+          isDraw === true &&
+          <>
+          <h2>Empatou</h2>
           </>
         }
         </div>

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import GameInfo from '../gameinfo/GameInfo'
 import styles from './Game.module.css'
 import GameTable from '../GameTable/GameTable'
-
+import Score from '../score/Score'
 
 const WinnerTable =[
 [0, 1, 2],
@@ -106,6 +106,10 @@ function Game(){
           />
         </div>
         
+      </div>
+
+      <div>
+        <Score></Score>
       </div>
     </>
   )
